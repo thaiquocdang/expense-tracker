@@ -7,7 +7,7 @@ export default (state, action) => {
                 ...state,
                 transactions: state.transactions.filter(transaction => transaction.id !== action.payload)
             }
-            console.log(newState,'newstate');
+            // console.log(newState,'newstate');
             SAVE_DATA_TO_LOCAL_STORAGE(newState)
             return newState
         

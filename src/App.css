@@ -105,6 +105,11 @@ input[type='number'] {
   outline: 0;
 }
 
+.reset-button{
+  width: 20%;
+  background-color: darkcyan;
+}
+
 .list {
   list-style-type: none;
   padding: 0;

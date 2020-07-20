@@ -17,7 +17,7 @@ export const TransactionList = () => {
             {transactions.map(transaction =>(<Transaction key={transaction.id} transaction={transaction} />))}
             </ul>
 
-            <button onClick={() => reset()}>Reset</button>
+            <button onClick={() => reset()} className="btn reset-button">Reset</button>
         </>
     )
 }
