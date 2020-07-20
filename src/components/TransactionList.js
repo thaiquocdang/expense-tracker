@@ -4,8 +4,11 @@ import { Transaction } from './Transaction'
 
 
 export const TransactionList = () => {
-    const { transactions } = useContext(GlobalContext);
+    const { transactions, reset } = useContext(GlobalContext);
 
+    // const reset= () =>{
+        // }
+            // console.log(reset,'reset');
 
     return (
         <>
@@ -13,6 +16,8 @@ export const TransactionList = () => {
             <ul className="list">
             {transactions.map(transaction =>(<Transaction key={transaction.id} transaction={transaction} />))}
             </ul>
+
+            <button onClick={() => reset()}>Reset</button>
         </>
     )
 }

@@ -1,10 +1,14 @@
 import React, { createContext, useReducer } from 'react';
 import AppReducer from './AppReducer';
+import { waitForDomChange } from '@testing-library/react';
+
+const GET_ITEMS_FROM_LOCAL_STORAGE = () => {
+    return JSON.parse(localStorage.getItem('transactions'))
+}
 
 //Initial State
 const initialState = {
-    transactions: [
-        
+    transactions: GET_ITEMS_FROM_LOCAL_STORAGE() || [
     ]
 }
 
@@ -30,11 +34,19 @@ export const GlobalProvider = ({ children }) => {
             payload: transaction
         })
     }
+
+    function reset(){
+        dispatch({
+            type:'RESET',
+
+        })
+    }
     return (
         <GlobalContext.Provider value={{
             transactions: state.transactions,
             deleteTransaction,
-            addTransaction
+            addTransaction,
+            reset
         }}>
             {children}
         </GlobalContext.Provider>
