@@ -1,19 +1,22 @@
 import styled from 'styled-components';
 
 const Button = styled.button`
-background: ${props => props.primary ? "rgb(255, 140, 70)" : "white"};
-color: ${props => props.primary ? "white" : "rgb(255, 140, 70)"};
+background: ${props => props.primary ? "rgb(255, 140, 70)" : "darkcyan"};
+color: white ;
 
 font-size: 1em;
 margin: 10px 0 30px;
 padding: 0.5em 1em;
-border: 1px solid rgb(255, 140, 70);
+border: 0;
 border-radius: 1px;
-width: 100%;
+width: ${props => props.primary ? "100%" : "20%"};
 cursor: pointer;
+outline: none;
 
 &:hover {
     transform: scale(0.98);
+}
+
 }
 `;
 

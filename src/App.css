@@ -87,27 +87,9 @@ input[type='number'] {
   width: 100%;
 }
 
-.btn {
-  cursor: pointer;
-  background-color: rgb(255, 140, 70);
-  box-shadow: var(--box-shadow);
-  color: #fff;
-  border: 0;
-  display: block;
-  font-size: 16px;
-  margin: 10px 0 30px;
-  padding: 10px;
-  width: 100%;
-}
 
-.btn:focus,
 .delete-btn:focus {
   outline: 0;
-}
-
-.reset-button{
-  width: 20%;
-  background-color: darkcyan;
 }
 
 .list {

@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react'
 import { GlobalContext } from '../context/GlobalState';
-import {Button, ButtonNew} from './Button.js'
+import { Button } from './Button.js'
 
 export const AddTransaction = () => {
   const [text, setText] = useState('');
@@ -38,7 +38,7 @@ export const AddTransaction = () => {
           <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Enter amount..." />
         </div>
         {/*<button className="btn" >Add transaction</button>*/}
-        <Button primary>New Button</Button>
+        <Button primary>Add Transaction</Button>
       </form>
     </>
   )
