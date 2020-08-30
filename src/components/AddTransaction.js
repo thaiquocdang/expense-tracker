@@ -1,12 +1,12 @@
 import React, { useState, useContext } from 'react'
-import { GlobalContext } from '../context/GlobalState'
+import { GlobalContext } from '../context/GlobalState';
+import {Button, ButtonNew} from './Button.js'
 
 export const AddTransaction = () => {
   const [text, setText] = useState('');
   const [amount, setAmount] = useState(0);
 
   const { addTransaction} = useContext(GlobalContext);
- 
 
   const onSubmit = e => {
     e.preventDefault();
@@ -21,12 +21,8 @@ export const AddTransaction = () => {
     if(amount==0){
       alert("Amount cannot be 0")
     }else{
-
       addTransaction(newTransaction)
     }
-
- 
-    
   }
 
   return (
@@ -41,7 +37,8 @@ export const AddTransaction = () => {
           <label htmlFor="amount">Amount <br />(negative - expense, positive - income)</label>
           <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Enter amount..." />
         </div>
-        <button className="btn" >Add transaction</button>
+        {/*<button className="btn" >Add transaction</button>*/}
+        <Button primary>New Button</Button>
       </form>
     </>
   )
